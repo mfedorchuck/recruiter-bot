@@ -1,10 +1,13 @@
+# IDE templates
+.idea/
+
+# Credentials
+credentials.*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
-*.so
 
 # Distribution / packaging
 .Python
@@ -50,10 +53,6 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
-
-# Translations
-*.mo
-*.pot
 
 # Django stuff:
 *.log
