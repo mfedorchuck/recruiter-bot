@@ -1,18 +1,18 @@
 import bottle
 from urllib import parse, request
 
-from common.credentials import tg_bot_url_recruiter, tg_bot_url_debug
+from common.credentials import tg_url_recruiter, tg_url_debug
 
 
 # endpoint
-@bottle.post('/')
+@bottle.get('/')
 def main():
     data = bottle.request.json
-    print(data["body"])
-    r1 = request.urlopen(tg_bot_url_debug.format(parse.quote(data["body"])))
-    r2 = request.urlopen(tg_bot_url_recruiter.format(parse.quote(data["body"])))
+    print(data)
+    r1 = request.urlopen(tg_url_debug.format(parse.quote(data["body"])))
+    r2 = request.urlopen(tg_url_recruiter.format(parse.quote(data["body"])))
 
-    return r1
+    return {"text": "answer"}
 
 
 if __name__ == '__main__':
